@@ -10,7 +10,7 @@ import hashlib
 import sqlite3
 from model_loading import *
 
-from resources import choose_resources, choose_support
+from resources import choose_resources
 
 # Login & Security
 
