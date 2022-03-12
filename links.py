@@ -1,23 +1,17 @@
 anger_resources = (
     ("Try Happify", "Happify is a web application that helps you manage your mental health", "https://happify.io/"),
-    ("How to Meditate", "How to Meditate is a website that teaches you how to meditate",
-     "https://www.mindful.org/how-to-meditate/"),
-    ("Try Running", "Running can lift your mood and help you feel more equipped to confront your anger",
-     "https://www.self.com/story/rage-run"),
-    ("Try Meditation", "Meditation can help you feel more calm and relaxed", "https://www.mindful.org/meditation/"),
-    ("Anger Management Methods", "Anger Management Methods is a website that teaches you how to manage your anger",
-     "https://www.self.com/article/anger-management-methods"),
-    ("Emotional Management Class", "Emotional Management Class is a website that teaches you how to manage your anger", "https://tomcaplanmsw.com/anger-management/")
+    ("Give Meditation a try", "Meditation will help you feel more calm and relaxed", "https://www.mindful.org/meditation/"),
+    ("Control your anger", "This is a website that teaches you how to control your anger",
+     "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434"),
+    ("Anger Management Class", "This is a website that teaches you how to manage your anger", "https://www.helpguide.org/articles/relationships-communication/anger-management.htm")
 )
 
 fear_resources = (
-    ("How to overcome fear and anxiety",
-     "How to overcome fear and anxiety is a website that teaches you how to overcome fear and anxiety",
-     "https://www.nhsinform.scot/healthy-living/mental-wellbeing/fears-and-phobias/ten-ways-to-fight-your-fears"),
-    ("Breathing techniques", "Try these breathing techniques to calm your mind",
-     "https://www.mentalhealth.org.uk/publications/overcome-fear-anxiety"),
     ("Don't be afraid of fear", "Here are 5 ways to overcome fear and setbacks",
      "https://www.tonyrobbins.com/stories/unleash-the-power/overcoming-fear-in-5-steps/"),
+     ("How to overcome fear and anxiety",
+     "How to overcome fear and anxiety is a website that teaches you how to overcome fear and anxiety",
+     "https://www.nhsinform.scot/healthy-living/mental-wellbeing/fears-and-phobias/ten-ways-to-fight-your-fears"),
     ("Preparing for Panics", "You may have a type of anxiety disorder called panic disorder. Left untreated, "
                              "panic disorder can lower your quality of life",
      "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"),
@@ -26,7 +20,11 @@ fear_resources = (
     ("Successful Mental Health", "How intense is work right now? These simple and useful techniques may help lessen "
                                  "your anxiety.",
      "https://www.inc.com/marcel-schwantes/8-mental-hacks-that-will-keep-you-strong-under-control-during-tough-times"
-     ".html")
+     ".html"),
+    
+    ("Breathing techniques", "Try these breathing techniques to calm your mind",
+     "https://www.mentalhealth.org.uk/publications/overcome-fear-anxiety")
+    
 )
 
 joy_resources = (
