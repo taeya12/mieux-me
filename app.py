@@ -69,24 +69,24 @@ def main():
             # Notes already made for demo
             "notes": [
                 ("When I awoke today early, I didn't want to get out of bed. I just lay there for a while  I was still thinking about last night.",
-                 "sadness", datetime(12, 1,2022)),
+                 "sadness", datetime(2022, 1, 12)),
                 ("Today, I went out with a friend and we had lot of fun and ate some good food.", "joy",
-                 datetime(13, 1, 2022)),
+                 datetime(2022, 1, 13)),
                 ("I am excited about the project that my friend and I are working on.", "joy",
-                 datetime(14, 1, 2022)),
-                ("Still thinking about the talk, I had last night with my friend. It was so much fun and I was finally happy after a long time.", "surprise", datetime(15,1,2022)),
-                ("Why does my friend always get late for a meeting, still angry at her.", "anger", datetime(16,1,2022)),
+                 datetime(2022, 1, 14)),
+                ("Still thinking about the talk, I had last night with my friend. It was so much fun and I was finally happy after a long time.", "surprise", datetime(2022, 1, 15)),
+                ("Why does my friend always get late for a meeting, still angry at her.", "anger", datetime(2022, 1, 16)),
                 (
-                "This morning I woke up with a horrible headache. why do I think so much", "anger", datetime(17,1,2022)),
+                "This morning I woke up with a horrible headache. why do I think so much", "anger", datetime(2022, 1, 17)),
                 ("Finally, some progress on the project. looks like we will complete it on time.", "surprise",
-                 datetime(18, 1, 2022)),
-                ("WHY AM I SO STUPID. I got blank at a presentation today.", "anger", datetime(19, 1, 2022)),
-                ("I cant stop thinking about that presentation.", "sadness", datetime(20, 1, 2022)),
-                ("ppt still on my mind...", "sadness", datetime(21 ,1, 2022)),
-                ("Ordered something good to eat to take off my mind from that presentation. good food does lift up the mood.", "joy", datetime(22, 1, 2022)),
-                ("Today was a beautiful day", "joy", datetime(23, 1, 2022)),
+                 datetime(2022, 1, 18)),
+                ("WHY AM I SO STUPID. I got blank at a presentation today.", "anger", datetime(2022, 1, 19)),
+                ("I cant stop thinking about that presentation.", "sadness", datetime(2022, 1, 20)),
+                ("ppt still on my mind...", "sadness", datetime(2022, 1, 21)),
+                ("Ordered something good to eat to take off my mind from that presentation. good food does lift up the mood.", "joy", datetime(2022, 1, 22)),
+                ("Today was a beautiful day", "joy", datetime(2022, 1, 23)),
         
-                ("I cant decide weather or not to message him...", "love", datetime(26, 1,2022)),
+                ("I cant decide weather or not to message him...", "love", datetime(2022, 1, 24)),
             ],
             "placeholder_text": "..."
 
