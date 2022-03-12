@@ -12,6 +12,19 @@ from model_loading import *
 
 from resources import choose_resources, choose_support
 
+st.markdown(
+    <style>
+    .reportview-container {
+        background-image: linear-gradient(#2e7bcf,#2e7bcf); 
+        color: white;
+    }
+   .sidebar .sidebar-content {
+        background-image: linear-gradient(#2e7bcf,#2e7bcf); 
+        color: white;
+    }
+    </style>
+    unsafe_allow_html=True
+)
 
 # Login & Security
 
@@ -29,9 +42,6 @@ def check_hashes(password, hashed_text):
 
 conn = sqlite3.connect('data.db')
 c = conn.cursor()
-
-# suicide_model = load_model()
-# suicide_model.eval()
 
 
 def create_usertable():
@@ -55,6 +65,7 @@ def view_all_users():
     return data
 
 
+
 def main():
     pages = {
         "Home": page_home,
@@ -71,28 +82,25 @@ def main():
 
             # Notes already made for demo
             "notes": [
-                ("Today I woke up, and didnt want to get out of bed. I just sort of laid there. This made me feel bad.",
-                 "sadness", datetime(2020, 12, 15)),
-                ("This afternoon, I ate a big meal. This made me feel good, I would like to eat more.", "joy",
-                 datetime(2020, 12, 15)),
-                ("It was hard for me to sleep yesterday, I had a girl on my mind.", "love", datetime(2020, 12, 16)),
-                ("This morning, I got up before my alarm. I was excited to get out of bed!", "joy",
-                 datetime(2020, 12, 16)),
-                ("Uber gave me a free meal today. I wonder why.", "surprise", datetime(2020, 12, 16)),
-                ("I couldnt fall asleap yesterday. I just stared at the cealing.", "anger", datetime(2020, 12, 17)),
+                ("When I awoke today early, I didn't want to get out of bed. I just lay there for a while  I was still thinking about last night.",
+                 "sadness", datetime(12, 1,2022)),
+                ("Today, I went out with a friend and we had lot of fun and ate some good food.", "joy",
+                 datetime(13, 1, 2022)),
+                ("I am excited about the project that my friend and I are working on.", "joy",
+                 datetime(14, 1, 2022)),
+                ("Still thinking about the talk, I had last night with my friend. It was so much fun and I was finally happy after a long time.", "surprise", datetime(15,1,2022)),
+                ("Why does my friend always get late for a meeting, still angry at her.", "anger", datetime(16,1,2022)),
                 (
-                "This morning I woke up with a horrible hedache. Motrin didn't help.", "anger", datetime(2020, 12, 17)),
-                ("I havent written a post recently. Its a good habit I should get back into.", "anger",
-                 datetime(2020, 12, 20)),
-                ("WHY AM I SO STUPID. I failed a quiz today.", "anger", datetime(2020, 12, 21)),
-                ("I cant stop thinking about that quiz. I studied so hard.", "sadness", datetime(2020, 12, 21)),
-                ("Quiz still on my mind...", "sadness", datetime(2020, 12, 21)),
-                ("I finally understand the material for my class!", "joy", datetime(2020, 12, 22)),
-                ("Today was a beautiful day", "joy", datetime(2020, 12, 22)),
-                ("I look forward to tomorrow", "joy", datetime(2020, 12, 22)),
-                ("I spoke to a girl today", "love", datetime(2020, 12, 24)),
-                ("I cant decide weather or not to message her...", "love", datetime(2020, 12, 24)),
-                ("What a day", "surprise", datetime(2020, 12, 26)),
+                "This morning I woke up with a horrible headache. why do I think so much", "anger", datetime(17,1,2022)),
+                ("Finally, some progress on the project. looks like we will complete it on time.", "surprise",
+                 datetime(18, 1, 2022)),
+                ("WHY AM I SO STUPID. I got blank at a presentation today.", "anger", datetime(19, 1, 2022)),
+                ("I cant stop thinking about that presentation.", "sadness", datetime(20, 1, 2022)),
+                ("ppt still on my mind...", "sadness", datetime(21 ,1, 2022)),
+                ("Ordered something good to eat to take off my mind from that presentation. good food does lift up the mood.", "joy", datetime(22, 1, 2022)),
+                ("Today was a beautiful day", "joy", datetime(23, 1, 2022)),
+        
+                ("I cant decide weather or not to message him...", "love", datetime(26, 1,2022)),
             ],
             "placeholder_text": "..."
 
@@ -109,22 +117,19 @@ def main():
     # page = "Home"
 
     with st.sidebar:
-        st.title("better.me")
-        if st.button("🏠     Home"): st.session_state.page = "Home"
-        if st.button("📝     Journal"): st.session_state.page = "Journal"
-        if st.button("📕     Previous Journals"): st.session_state.page = "Previous Journals"
-        if st.button("📊     Analytics"): st.session_state.page = "Analytics"
-        if st.button("📚     Recommendations"): st.session_state.page = "Resources"
+        st.title("mieux me")
+        if st.button("Home 🏠"): st.session_state.page = "Home"
+        if st.button("Journal 📝     "): st.session_state.page = "Journal"
+        if st.button("Previous Journals 📕"): st.session_state.page = "Previous Journals"
+        if st.button("Analytics 📊"): st.session_state.page = "Analytics"
+        if st.button("Recommendations 📚"): st.session_state.page = "Resources"
 
     pages[st.session_state.page]()
 
 
 def page_home():
     with st.container():
-        st.title("🏠 Home")
-        '''
-        ##### Welcome to Better.Me. Please login below to access your personal AI powered diary.
-        '''
+        st.title("Home 🏠")
         username = st.text_input('Username')
         password = st.text_input("Password", type="password")
 
@@ -165,13 +170,13 @@ def page_signup():
 
 
 def page_journal():
-    st.title("📝 Write a note")
+    st.title("Write a note 📝 ")
     API_URL = "https://api-inference.huggingface.co/models/mrm8488/t5-base-finetuned-emotion"
     API_TOKEN = "rAplzyQGYLwcFPzUfSqVpGvRdvvXHrmfOitDsopymDDjoxtaOIEfDMeFALNMdDaNuQNIoPZfutTtqBCMlcRsDACtBUoHTsiPFsrQagnPmqyzKbJLAMBBTJTgLNpcvpOZ"
     headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
     def mood_to_emoji(mood):
-        return {'sadness': '😢', 'joy': '😂', 'fear': '😱', 'anger': '😡', 'love': '😍', 'surprise': '😲'}[mood]
+        return {'sadness': '🥺', 'joy': '😁', 'fear': '😱', 'anger': '😡', 'love': '😍', 'surprise': '😲'}[mood]
 
     def mood_inference(note):
         data = {"inputs": note}
@@ -183,11 +188,6 @@ def page_journal():
             st.info(f"Your mood report -- {mood} {mood_to_emoji(mood)}")
         except KeyError:
             st.warning("We're sorry! No meaningful mood analysis could be completed 😢.")
-        # suicide_pred = pred(mood, suicide_model)
-        #if suicide_pred == 1:
-        #   st.warning(
-        #       "We're so sorry that you are going through this. Help is available! Speak with someone today at +1 833-456-4566. \n Asking for help can be hard. That’s why we offer a safe place to talk - any time, in your own way. If you are having thoughts of suicide, you don’t have to face them alone. We are available if you need a safe and judgement free place to talk. Our responders are here to listen to you, support you, and keep you safe.")
-        # notes.append(note)
         st.session_state.notes.append((note, mood, date))
         return mood
 
@@ -217,7 +217,7 @@ def page_journal():
 
 
 def page_previous_journals():
-    st.title("📕 Previous journals")
+    st.title("Previous journals 📕")
 
     mood_box = {
         "anger": st.error,
@@ -246,7 +246,7 @@ def page_previous_journals():
 
 
 def page_analytics():
-    st.title("📊 Analytics")
+    st.title("Analytics 📊")
 
     counter = Counter(map(lambda x: x[1], st.session_state.get("notes", [])))
     mood_list = ["anger", "fear", "joy", "love", "sadness", "surprise"]
@@ -289,7 +289,7 @@ def page_analytics():
 
 
 def page_resources():
-    st.title("📚 Resources")
+    st.title("Resources 📚 ")
     col1, col2, col3 = st.columns(3)
 
     # TODO: Change based on analytics page
@@ -313,26 +313,26 @@ def page_resources():
         st.markdown("[Learn More](%s)" % p3.url, unsafe_allow_html=True)
 
     st.markdown("---")
-    st.title("Recommended Support")
+    # st.title("Recommended Support")
 
-    col4, col5, col6 = st.columns(3)
+    # col4, col5, col6 = st.columns(3)
 
-    s1, s2, s3 = choose_support(0), choose_support(1), choose_support(2)
-    with col4:
-        st.header(s1.title)
-        st.write(s1.description)
-        st.markdown("[Learn More](%s)" % s1.url, unsafe_allow_html=True)
+    # s1, s2, s3 = choose_support(0), choose_support(1), choose_support(2)
+    # with col4:
+    #     st.header(s1.title)
+    #     st.write(s1.description)
+    #     st.markdown("[Learn More](%s)" % s1.url, unsafe_allow_html=True)
 
-    with col5:
-        st.header(s2.title)
-        st.write(s2.description)
-        st.markdown("[Learn More](%s)" % s2.url, unsafe_allow_html=True)
+    # with col5:
+    #     st.header(s2.title)
+    #     st.write(s2.description)
+    #     st.markdown("[Learn More](%s)" % s2.url, unsafe_allow_html=True)
 
-    with col6:
-        st.header(s3.title)
-        st.write(s3.description)
-        st.markdown("[Learn More](%s)" % s3.url, unsafe_allow_html=True)
-
+    # with col6:
+    #     st.header(s3.title)
+    #     st.write(s3.description)
+    #     st.markdown("[Learn More](%s)" % s3.url, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
+
