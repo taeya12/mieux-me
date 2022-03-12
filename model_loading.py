@@ -11,7 +11,7 @@ except ImportError:
     from torch.utils.model_zoo import load_url as load_state_dict_from_url
 
 model_urls = dict(
-    params='https://github.com/better-me-team/better.me/releases/download/model_params/model.pt',
+    params='https://github.com/taeya12/download/model_params/model.pt',
 )
 
 
