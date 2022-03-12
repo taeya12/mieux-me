@@ -92,16 +92,6 @@ def main():
 
         })
 
-        # FAKE DATA GENERATOR
-        mood_list = ["anger", "fear", "joy", "love", "sadness", "surprise"]
-        weights = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4, 11: 4, 12: 2, 13: 2, 14: 2, 15: 1,
-                   16: 3, 16: 3, 17: 5, 18: 1, 19: 2}
-        for i in range(100):
-            st.session_state.notes.append(("Test Note: " + str(i), mood_list[weights[randint(0, 19)]],
-                                           datetime(2021, 1 + ((i // 30) % 12), 1 + (i % 27), 0, 0, 0)))
-
-    # page = "Home"
-
     with st.sidebar:
         st.title("mieux me")
         if st.button("Home 🏠"): st.session_state.page = "Home"
@@ -299,25 +289,6 @@ def page_resources():
         st.markdown("[Learn More](%s)" % p3.url, unsafe_allow_html=True)
 
     st.markdown("---")
-    # st.title("Recommended Support")
-
-    # col4, col5, col6 = st.columns(3)
-
-    # s1, s2, s3 = choose_support(0), choose_support(1), choose_support(2)
-    # with col4:
-    #     st.header(s1.title)
-    #     st.write(s1.description)
-    #     st.markdown("[Learn More](%s)" % s1.url, unsafe_allow_html=True)
-
-    # with col5:
-    #     st.header(s2.title)
-    #     st.write(s2.description)
-    #     st.markdown("[Learn More](%s)" % s2.url, unsafe_allow_html=True)
-
-    # with col6:
-    #     st.header(s3.title)
-    #     st.write(s3.description)
-    #     st.markdown("[Learn More](%s)" % s3.url, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
