@@ -12,20 +12,6 @@ from model_loading import *
 
 from resources import choose_resources, choose_support
 
-st.markdown(
-    <style>
-    .reportview-container {
-        background-image: linear-gradient(#2e7bcf,#2e7bcf); 
-        color: white;
-    }
-   .sidebar .sidebar-content {
-        background-image: linear-gradient(#2e7bcf,#2e7bcf); 
-        color: white;
-    }
-    </style>
-    unsafe_allow_html=True
-)
-
 # Login & Security
 
 def make_hashes(password):
