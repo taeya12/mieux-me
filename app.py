@@ -244,25 +244,6 @@ def page_analytics():
     latest_date = max(map(lambda x: x[2], st.session_state.get("notes", [])))
     date_iterator = pd.date_range(earliest_date, latest_date, freq='W')
 
-    line_graph_frequencies = []
-    for date in date_iterator:
-        line_graph_frequencies.append([0, 0, 0, 0, 0, 0])
-        for note in st.session_state.get("notes", []):
-            if note[2].date() <= date:
-                line_graph_frequencies[-1][mood_list.index(note[1])] += 1
-    for i in range(len(line_graph_frequencies) - 1, 0, -1):
-        for j in range(6):
-            line_graph_frequencies[i][j] -= line_graph_frequencies[i - 1][j]
-
-    mood_line_graph = pd.DataFrame(
-        line_graph_frequencies,
-        columns=mood_list
-    )
-    mood_line_graph['Weeks'] = range(1, len(line_graph_frequencies) + 1)
-    fig = px.line(mood_line_graph, x='Weeks', y=mood_list)
-    fig.layout.update(width=800, margin=dict(l=0))
-    st.write(fig)
-
 
 def page_resources():
     st.title("Resources 📚 ")
