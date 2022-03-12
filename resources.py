@@ -41,14 +41,14 @@ def choose_resources(mood, ammount):
     ]
 
 
-def choose_support(num):
-    supports = (
-        ("Student Wellness Hub", "McGill offers mental health and wellness services to students.",
-         "https://www.mcgill.ca/wellness-hub/"),
-        ("Access Advisors", "An Access Advisor can help you navigate the services offered by the Student Wellness Hub.",
-         "https://www.mcgill.ca/access-advisors/"),
-        ("Counsellors", "At your first session, you'll be matched with a Counsellor who will work with you to better "
-                        "understand the challenges that you're facing.",
-         "https://www.mcgill.ca/wellness-hub/hub-clinical-services/hub-clinicians/counsellors#About"),
-    )
-    return Resource(supports[num][0], supports[num][1], supports[num][2])
+# def choose_support(num):
+#     supports = (
+#         ("Student Wellness Hub", "McGill offers mental health and wellness services to students.",
+#          "https://www.mcgill.ca/wellness-hub/"),
+#         ("Access Advisors", "An Access Advisor can help you navigate the services offered by the Student Wellness Hub.",
+#          "https://www.mcgill.ca/access-advisors/"),
+#         ("Counsellors", "At your first session, you'll be matched with a Counsellor who will work with you to better "
+#                         "understand the challenges that you're facing.",
+#          "https://www.mcgill.ca/wellness-hub/hub-clinical-services/hub-clinicians/counsellors#About"),
+#     )
+#     return Resource(supports[num][0], supports[num][1], supports[num][2])
