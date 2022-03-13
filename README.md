@@ -1,7 +1,8 @@
 # mieux-me
 
 ## Project Description
-better.me is an AI journaling tool that helps you analyze your emotions and provide you with smart recommendations for your well being. We used NLP emotion analytics to process text data and incorporated a suicidal prevention algorithm that will help you make better informed decisions about your mental health.  
+mieux.me is an AI journaling tool that helps you analyze your emotions and provide you with smart recommendations for your well being. We used NLP emotion analytics to process text data and incorporated a suicidal prevention algorithm that will help you make 
+informed decisions about your mental health.  
 
 ## Motivation
 Poor mental health is a growing pandemic that is still being stigmatized. Even after spending $5 Billion in federal investments for mental health, 1.3 million adults attempted suicide and 1.1 million plans to commit suicide. 
@@ -13,8 +14,8 @@ Poor mental health is a growing pandemic that is still being stigmatized. Even a
 
 | Features              | Description                                                                                                                                               |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Personal Journal      | Better Me is a personal AI-powered journal where users can write daily notes reflecting on their life's progress.                                         |
-| NLP Emotion Analytics | With the help of natural language process, Better Me will classify the user's emotional situation and keep a track of the data.                           |
+| Personal Journal      | mieux Me is a personal AI-powered journal where users can write daily notes reflecting on their life's progress.                                         |
+| NLP Emotion Analytics | With the help of natural language process, mieux Me will classify the user's emotional situation and keep a track of the data.                           |
 | Smart Recommendations | It uses this monitored data to suggest appropriate mental health resources to the users and also provides them with suitable data analytics.              |
 | Suicide Prevention    | In order to take a step forward towards suicide prevention, it also incorporates a suicidal text detection algorithm that triggers a preventive measure . | 
 
